@@ -1,0 +1,48 @@
+
+/* Google fonts (NB: load før :root) */
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Sora&display=swap');
+
+/*Farver*/
+:root {
+--black: #000000;
+--white: #ffffff;
+--grey: #EAEAEA;
+--red: #C9072C;
+--guld: #BBA14F;
+
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+body{
+  background-color: #BBA14F;
+  height: 100vh;
+}
+.menupunkter ul li a{
+  text-decoration: none;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px
+
+}
+ul li a{
+  font-size: 50px;
+  justify-content: center;
+}
+.menupunkter{
+  padding-top: 100px;
+}
+
+.kryds {
+  text-decoration: none;
+  color: #C9072C;
+  font-size: 40px;
+  margin-left: 20px;
+  
+}
