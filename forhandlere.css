@@ -1,0 +1,371 @@
+/* Google fonts (NB: load før :root) */
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Sora&display=swap');
+
+/*Farver*/
+:root {
+--black: #000000;
+--white: #ffffff;
+--grey: #EAEAEA;
+--red: #C9072C;
+--guld: #BBA14F;
+
+}
+
+/*Vigtigt for hele sitet*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family:'Lora', sans-serif;
+}
+
+body{
+  background-color: #BBA14F;
+}
+
+/*menubar farve og størrelse*/
+nav{
+  display: flex;
+  height: 80px;
+  background: #EAEAEA;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/*Logo*/
+.logo {
+  width: 115px;
+  height: auto;
+}
+
+/*menupunkter*/
+nav ul {
+margin-right: 25px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  position: relative;
+  color: black;
+  font-size: 18px;
+  padding: 5px 0;
+  text-transform: uppercase;
+}
+
+
+nav ul li a:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background: #BBA14F;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .4s linear;
+}
+
+/*menupunkter effekter*/
+nav ul li a:hover:before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/*søgeikon*/
+.ikon {
+  width: 45px;
+  margin-right: 20px;
+}
+.headimage{
+  align-self: center;
+}
+
+label{
+  text-decoration: none;
+  list-style: none;
+}
+
+/*burgermenu dekoration*/
+.burger {
+  text-decoration: none;
+  color: #C9072C;
+  font-size: 40px;
+  align-self: center;
+  margin-left: 20px;
+}
+
+/*tekst*/
+.forhandleretekst {
+  font-size: 20px;
+  margin-top: 10%;
+  text-align: center;
+}
+
+.forhandleretekst2 {
+  font-size: 15px;
+  margin-top: 5%;
+  text-align: center;
+}
+
+.postnrtekst {
+  font-size: 15px;
+  text-align: center;
+  margin-top: 10%;
+}
+.remabillede {
+  width: 70%;
+  margin-top: 7%;
+  margin-left: 18%;
+}
+
+.nettobillede {
+  width: 70%;
+  margin-top: 5%;
+  margin-left: 15%;
+}
+
+/*søgefelt*/
+input[type=text], input[type=password] {
+  width: 60%;
+  padding: 5px;
+  margin-top: 5%;
+  margin-left: 20%;
+  background: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 100px;
+}
+
+
+/* Indstillinger for søg knap*/
+
+  button {
+    color: var(--black);
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    padding: 5px;
+    margin: 8px 0px;
+    cursor: pointer;
+    width: 20%;
+    border-radius: 40px;
+    margin-left: 60%;
+  }
+
+  .soegknap {
+    margin-top: 2%;
+  }
+
+  /* Indstillinger for søg knap */
+  .soegknap:hover {
+    background-color: #BBA14F;
+    transition: all 1s ease;
+  }
+
+  iframe{
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+
+  /* sne dekoration */
+  .snowflake {
+    color: #ffffff;
+    font-size: 1em;
+  }
+
+  /*Sne*/
+  @-webkit-keyframes snowflakes-fall{0%
+    {top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%
+    {-webkit-transform:translateX(0px);transform:translateX(0px)}50%
+    {-webkit-transform:translateX(80px);transform:translateX(80px)}100%
+    {-webkit-transform:translateX(0px);transform:translateX(0px)}}@keyframes snowflakes-fall{0%
+    {top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%
+    {transform:translateX(0px)}50%
+    {transform:translateX(80px)}100%
+    {transform:translateX(0px)}}
+    .snowflake{position:fixed;top:-10%;
+    z-index:9999;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    cursor:default;
+    -webkit-animation-name:snowflakes-fall,snowflakes-shake;
+    -webkit-animation-duration:10s,3s;
+    -webkit-animation-timing-function:linear,ease-in-out;
+    -webkit-animation-iteration-count:infinite,infinite;
+    -webkit-animation-play-state:running,running;
+    animation-name:snowflakes-fall,snowflakes-shake;
+    animation-duration:10s,3s;
+    animation-timing-function:linear,ease-in-out;
+    animation-iteration-count:infinite,infinite;
+    animation-play-state:running,running}
+    .snowflake:nth-of-type(0){left:1%;
+    -webkit-animation-delay:0s,0s;
+    animation-delay:0s,0s}
+    .snowflake:nth-of-type(1){left:10%;
+    -webkit-animation-delay:1s,1s;
+    animation-delay:1s,1s}
+    .snowflake:nth-of-type(2){left:20%;
+    -webkit-animation-delay:6s,.5s;
+    animation-delay:6s,.5s}
+    .snowflake:nth-of-type(3){left:30%;
+    -webkit-animation-delay:4s,2s;
+    animation-delay:4s,2s}
+    .snowflake:nth-of-type(4){left:40%;
+    -webkit-animation-delay:2s,2s;
+    animation-delay:2s,2s}
+    .snowflake:nth-of-type(5){left:50%;
+    -webkit-animation-delay:8s,3s;animation-delay:8s,3s}
+    .snowflake:nth-of-type(6){left:60%;
+    -webkit-animation-delay:6s,2s;
+    animation-delay:6s,2s}
+    .snowflake:nth-of-type(7){left:70%;
+    -webkit-animation-delay:2.5s,1s;
+    animation-delay:2.5s,1s}
+    .snowflake:nth-of-type(8){left:80%;
+    -webkit-animation-delay:1s,0s;
+    animation-delay:1s,0s}
+    .snowflake:nth-of-type(9){left:90%;
+    -webkit-animation-delay:3s,1.5s;
+    animation-delay:3s,1.5s
+  }
+
+
+  /*footer*/
+  .footer {
+    background-color: #EAEAEA;
+  }
+
+  .some {
+    line-height: 25px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+
+/*Media rules for Iphone*/
+@media only screen and (max-width: 400px) {
+  .menupunkter{
+    display: none;
+  }
+
+  .mail {
+    display: none;
+  }
+}
+
+  /*media rules for ipad*/
+    @media only screen and (min-width: 401px) {
+      .menupunkter{
+        display: none;
+      }
+
+      .forhandleretekst {
+      font-size: 30px;
+      }
+
+      .forhandleretekst2 {
+      font-size: 20px;
+      float: left;
+      margin-left: 5%;
+      margin-right: 60%;
+      margin-top: 10%;
+      }
+
+      .remabillede {
+      width: 40%;
+      margin-left: 50%;
+      margin-bottom: 40%;
+      margin-top: -20%;
+      }
+
+      .nettobillede {
+      width: 40%;
+      float: right;
+      margin-right: 11%;
+      margin-top: -35%;
+      }
+
+      iframe {
+      width: 50%;
+      margin-left: 5%;
+      margin-top: -20%;
+      }
+
+      .postnrudfyld {
+      width: 40%;
+      margin-left: 60%;
+      }
+
+      .postnrtekst {
+      font-size: 20px;
+      margin-left: 60%;
+      margin-top: -5%;
+      }
+    }
+
+
+  /*mediarules for liggende ipad*/
+    @media only screen and (min-width: 1024px) {
+
+    }
+
+
+  /*mediarules for web*/
+    @media only screen and (min-width: 1080px) {
+
+    .menupunkter{
+    display: block;
+    }
+
+    .burger {
+    display: none;
+    }
+
+    .forhandleretekst {
+    font-size: 30px;
+    }
+
+    .forhandleretekst2 {
+    font-size: 20px;
+    float: left;
+    margin-left: 5%;
+    margin-top: 10%;
+    }
+
+    .remabillede {
+    width: 30%;
+    margin-left: 60%;
+    margin-top: -10%;
+    }
+
+    .nettobillede {
+    width: 30%;
+    float: right;
+    margin-right: 11%;
+    }
+
+    iframe {
+    width: 50%;
+    margin-left: 5%;
+    }
+
+
+    .postnrudfyld {
+    width: 40%;
+    margin-left: 60%;
+    }
+
+    .postnrtekst {
+    font-size: 20px;
+    margin-left: 60%;
+    margin-top: -5%;
+    }
+  }
