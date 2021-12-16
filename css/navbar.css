@@ -1,0 +1,164 @@
+/* Google fonts (NB: load før :root) */
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Sora&display=swap');
+
+/*Farver*/
+:root {
+--black: #000000;
+--white: #ffffff;
+--grey: #EAEAEA;
+--red: #C9072C;
+--guld: #BBA14F;
+
+}
+
+/*Vigtigt for hele sitet*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family:'Lora', sans-serif;
+}
+
+body{
+  background-color: #BBA14F;
+}
+
+/*menubar farve og størrelse*/
+nav{
+  display: flex;
+  height: 80px;
+  background: #EAEAEA;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/*Logo*/
+.logo {
+  width: 115px;
+  height: auto;
+}
+
+/*menupunkter*/
+nav ul {
+margin-right: 25px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  position: relative;
+  color: black;
+  font-size: 18px;
+  padding: 5px 0;
+  text-transform: uppercase;
+}
+
+
+nav ul li a:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background: #BBA14F;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .4s linear;
+}
+
+/*menupunkter effekter*/
+nav ul li a:hover:before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/*søgeikon*/
+.ikon {
+  width: 45px;
+  margin-right: 20px;
+}
+.headimage{
+  align-self: center;
+}
+
+label{
+  text-decoration: none;
+  list-style: none;
+}
+
+.burger {
+  text-decoration: none;
+  color: #C9072C;
+  font-size: 40px;
+  align-self: center;
+  margin-left: 20px;
+}
+
+/*footer*/
+.footer {
+  background-color: #EAEAEA;
+}
+
+.some {
+  line-height: 25px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.insta {
+  width: 40px;
+  margin-top: 25%;
+}
+
+.lokation {
+  width: 25px;
+}
+
+.phone {
+  width: 30px;
+  margin-top: 15%;
+}
+
+ .email {
+  width: 30px;
+  margin-top: 60%;
+}
+
+/*Media rules for Iphone*/
+@media only screen and (max-width: 400px) {
+
+  .menupunkter{
+    display: none;
+  }
+}
+
+/*media rules for ipad*/
+@media only screen and (min-width: 401px) {
+  .menupunkter{
+    display: none;
+  }
+}
+
+  /*mediarules for liggende ipad*/
+    @media only screen and (min-width: 1024px){
+    }
+
+
+  /*mediarules for web*/
+    @media only screen and (min-width: 1080px) {
+
+  .menupunkter{
+    display: block;
+  }
+
+  .burger {
+    display: none;
+    }
+  }
